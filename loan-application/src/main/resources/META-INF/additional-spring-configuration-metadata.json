@@ -1,0 +1,5 @@
+{"properties": [{
+  "name": "app.credit-limit-multiplier",
+  "type": "java.lang.String",
+  "description": "A description for 'app.credit-limit-multiplier'"
+}]}
