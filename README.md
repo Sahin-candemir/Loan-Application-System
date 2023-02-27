@@ -11,7 +11,7 @@ Patika dev DefineX Java Spring Practicum Final Case
 -- Spring Boot DevTools
 -- Lombok
 -- Spring Data JPA
--- 
+-- Validation
 
 ## Run
 - Project > Run As> Maven Build  ``spring-boot:run``
@@ -38,3 +38,22 @@ id  | amount | credit_result | max_credit_score | min_credit_score | max_monthly
 4     | null     | true | 999  | 500 | 1000000.00 | 10001.00 | 0.5 | 0.25
 5     | null     | true | 1900 | 1000 | 1000000.00 | 0.00   | 1   | 0.5
 
+### Customer Controller
+
+Method   |   Path   |   Description|Request Parameters
+---------|----------|--------------|----------
+POST     |/api/customer | Bir müşteriyi kaydeder| CustomerDto(Json Body)
+DELETE   |/api/customer/{id}|Müşteri bilgilerini siler|integer (id)
+PUT      |/api/customer/{id}| Müşteri bilgilerini günceller|integer (id) <p/> UpdateCustomerDto(Json body)
+
+### Transaction Controller
+
+Method   |   Path   |   Description|Request Parameters
+---------|----------|--------------|----------
+POST     |/api/transaction | Gelen Müşteri bilgileri ile kredi başvurusu gerçekleştirilir |LoanApplicationRequest(Json Body)
+POST     |/api/transaction/tracking | Müşteri kimlik numarası ve doğum tarihi bilgisi ile kredi başvurusunu sorgular | LoanApplicationTranckingRequest(Json Body)
+
+### credit-score-service
+* Bir müşteri veri tabanına kaydedildiğinde random bir kredi skoru üretilir(0-1900) Rest Template kullanılarak credit-score-servise ine 
+istek atılır ve müşteriye ait kredi skoru kaydedilir.
+* Bir müşteri kredi başvurusu yaptığında credit-score-service müşterinin kimlik numarası bilgisi ile istek atılır ve müşteri kredi skoru alınır.
