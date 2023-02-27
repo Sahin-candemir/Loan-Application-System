@@ -57,3 +57,7 @@ POST     |/api/transaction/tracking | Müşteri kimlik numarası ve doğum tarih
 * Bir müşteri veri tabanına kaydedildiğinde random bir kredi skoru üretilir(0-1900) Rest Template kullanılarak credit-score-servise ine 
 istek atılır ve müşteriye ait kredi skoru kaydedilir.
 * Bir müşteri kredi başvurusu yaptığında credit-score-service müşterinin kimlik numarası bilgisi ile istek atılır ve müşteri kredi skoru alınır.
+
+## Swagger
+* Dokümantasyon için aşağıdaki adres kullanılmalıdır.
+* ``http://localhost:8081/swagger-ui/index.html`` 
