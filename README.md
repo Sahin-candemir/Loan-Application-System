@@ -1,5 +1,5 @@
-# PatikaDev-Definex-Final-Case
-Patika dev DefineX Java Spring Practicum Final Case
+# Loan Application System
+Kredi Başvuru Sistemi
 
 ## Kullanılan Teknolojiler
 * Java
